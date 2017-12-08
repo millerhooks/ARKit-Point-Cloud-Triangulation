@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1iJ-yp-ZZV">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ZB9-G1-LUe">
+            <objects>
+                <viewController id="1iJ-yp-ZZV" customClass="ViewController" customModule="PointCloudTriangulation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPq-SP-LLL">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maj-jf-Iw9" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                            </sceneKitView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="Dfk-OB-vFx" userLabel="Message Panel">
+                                <rect key="frame" x="20" y="20" width="935" height="43"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Kom-vE-zYo">
+                                    <rect key="frame" x="0.0" y="0.0" width="935" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Oe-T1-Gkr">
+                                            <rect key="frame" x="0.0" y="0.0" width="935" height="43"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1wH-AQ-zIL">
+                                                <rect key="frame" x="0.0" y="0.0" width="935" height="43"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="udH-9f-e2m">
+                                                        <rect key="frame" x="428.5" y="11" width="77.5" height="20.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="daa-VA-i1t">
+                                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ7-SP-Rbn" userLabel="Messages label">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="udH-9f-e2m" firstAttribute="centerY" secondItem="1wH-AQ-zIL" secondAttribute="centerY" id="BDE-GG-r86"/>
+                                                    <constraint firstItem="udH-9f-e2m" firstAttribute="centerX" secondItem="1wH-AQ-zIL" secondAttribute="centerX" id="HFR-Rt-Qw8"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="dark"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="2Oe-T1-Gkr" secondAttribute="trailing" id="N2d-ni-ypg"/>
+                                        <constraint firstItem="2Oe-T1-Gkr" firstAttribute="top" secondItem="Kom-vE-zYo" secondAttribute="top" id="cHn-Qv-Vh8"/>
+                                        <constraint firstAttribute="bottom" secondItem="2Oe-T1-Gkr" secondAttribute="bottom" id="cXj-s2-SPy"/>
+                                        <constraint firstItem="2Oe-T1-Gkr" firstAttribute="leading" secondItem="Kom-vE-zYo" secondAttribute="leading" id="m0c-dD-I0y"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="cH1-KI-7e4"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIi-gL-hiL" userLabel="Show Cloud Button" customClass="BouncyButton" customModule="PointCloudTriangulation" customModuleProvider="target">
+                                <rect key="frame" x="1042" y="392" width="70" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0p3-jS-59r"/>
+                                    <constraint firstAttribute="width" constant="70" id="d1k-Rd-Rqw"/>
+                                </constraints>
+                                <state key="normal" image="ShowCloud"/>
+                                <state key="selected" image="ShowCloudSelected"/>
+                                <state key="highlighted" image="ShowCloud"/>
+                                <connections>
+                                    <action selector="createCloudAction:" destination="1iJ-yp-ZZV" eventType="touchUpInside" id="dR0-VB-YwZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzn-x6-csc" userLabel="Restart Experience Button" customClass="BouncyButton" customModule="PointCloudTriangulation" customModuleProvider="target">
+                                <rect key="frame" x="975" y="20" width="117" height="43"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.1019607843" blue="0.1137254902" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="93I-5y-ypE"/>
+                                    <constraint firstAttribute="width" constant="117" id="DHJ-LM-d2M"/>
+                                </constraints>
+                                <state key="normal" image="restart"/>
+                                <state key="disabled" image="restartPressed"/>
+                                <state key="selected" image="restartPressed"/>
+                                <state key="highlighted" image="restartPressed"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restartExperience:" destination="1iJ-yp-ZZV" eventType="touchUpInside" id="Y0W-zf-PJg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jzn-x6-csc" firstAttribute="top" secondItem="gdp-8v-qEw" secondAttribute="top" id="8JN-zP-sW2"/>
+                            <constraint firstItem="LIi-gL-hiL" firstAttribute="centerY" secondItem="fPq-SP-LLL" secondAttribute="centerY" id="9jn-F7-jH5"/>
+                            <constraint firstItem="Dfk-OB-vFx" firstAttribute="top" secondItem="gdp-8v-qEw" secondAttribute="top" id="CS9-aK-fgL"/>
+                            <constraint firstItem="gdp-8v-qEw" firstAttribute="trailing" secondItem="Jzn-x6-csc" secondAttribute="trailing" constant="20" id="CoV-FV-iHf"/>
+                            <constraint firstItem="Maj-jf-Iw9" firstAttribute="leading" secondItem="gdp-8v-qEw" secondAttribute="leading" id="JKK-15-huz"/>
+                            <constraint firstItem="LIi-gL-hiL" firstAttribute="trailing" secondItem="gdp-8v-qEw" secondAttribute="trailing" id="Mqr-df-cUi"/>
+                            <constraint firstItem="Maj-jf-Iw9" firstAttribute="bottom" secondItem="gdp-8v-qEw" secondAttribute="bottom" id="NbW-UO-LKf"/>
+                            <constraint firstItem="Dfk-OB-vFx" firstAttribute="leading" secondItem="gdp-8v-qEw" secondAttribute="leading" constant="20" id="YmP-7T-cBR"/>
+                            <constraint firstItem="Maj-jf-Iw9" firstAttribute="trailing" secondItem="gdp-8v-qEw" secondAttribute="trailing" id="rhE-Wj-7ka"/>
+                            <constraint firstItem="Maj-jf-Iw9" firstAttribute="top" secondItem="fPq-SP-LLL" secondAttribute="top" id="tbN-4M-92b"/>
+                            <constraint firstItem="Jzn-x6-csc" firstAttribute="leading" secondItem="Dfk-OB-vFx" secondAttribute="trailing" constant="20" id="u6N-mS-QzN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gdp-8v-qEw"/>
+                    </view>
+                    <connections>
+                        <outlet property="createCloudButton" destination="LIi-gL-hiL" id="V1h-a9-Ziv"/>
+                        <outlet property="messageLabel" destination="pZ7-SP-Rbn" id="GGs-UA-a2G"/>
+                        <outlet property="messagePanel" destination="Dfk-OB-vFx" id="KuK-IB-kdL"/>
+                        <outlet property="restartExperienceButton" destination="Jzn-x6-csc" id="h5m-rx-rC3"/>
+                        <outlet property="sceneView" destination="Maj-jf-Iw9" id="NQi-mZ-nom"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgh-h8-6jF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.345323741007196" y="32.374100719424462"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="qmP-Ef-V1A">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hLo-oU-Fyr" customClass="SettingsViewController" customModule="PointCloudTriangulation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mcu-Ad-qlH">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max length of the triangle's leg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-Gm-XCU">
+                                <rect key="frame" x="20" y="20" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7TC-tA-mXx">
+                                <rect key="frame" x="18" y="78" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="legDistanceSliderAction:" destination="hLo-oU-Fyr" eventType="valueChanged" id="0cQ-th-ofJ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9k-x8-vGR">
+                                <rect key="frame" x="20" y="49" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rfk-ix-gBP"/>
+                    </view>
+                    <connections>
+                        <outlet property="legDistanceLabel" destination="W9k-x8-vGR" id="LDV-0g-cdu"/>
+                        <outlet property="legDistanceSlider" destination="7TC-tA-mXx" id="cdl-us-cn0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBN-Oh-6lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.50359712230215" y="31.654676258992808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ShowCloud" width="71" height="50"/>
+        <image name="ShowCloudSelected" width="71" height="50"/>
+        <image name="restart" width="20" height="23"/>
+        <image name="restartPressed" width="20" height="23"/>
+    </resources>
+</document>
