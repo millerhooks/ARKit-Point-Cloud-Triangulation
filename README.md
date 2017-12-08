@@ -5,7 +5,7 @@ Experiments with ARKit Point Cloud
 
 # Preview
 <p align="center">
-    <img src="/Media/PointCloudMeshTest.gif", width="240">
+    <img src="/Media/PointCloudMeshTest.gif", width="480">
 </p>
 
 ## Requirements
